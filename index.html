@@ -10,7 +10,508 @@
   </head>
   <body>
     <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
+      
+      
+      
+      /*
+      
+      
+      
+      
+      
+      
+      
+      */
+      
+   /*   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2c3e50;
+      }
+      
+      .novisableScreen {
+        display: none;
+      }
+      h1 {
+        font-size: 50px;
+      }
+
+      .menuBtn {
+        cursor: pointer;
+        padding: 5px 16px;
+        font-size: 25px;
+        width: 50vw;
+        height: 100px;
+        border: 2px solid;
+        border-radius: 6px;
+        color: #fff;
+        background-color: #000;
+        border-color: #fafafa;
+        text-align: center;
+        margin: 0 auto 20px;
+      }
+
+      .menuBtn:hover {
+        background-color: #030010;
+        border-color: #030010;
+        transition-duration: 0.1s;
+      }
+      input {
+        display: block;
+        box-sizing: border-box;
+      }
+
+      .questionBtn{
+
+        cursor: pointer;
+        padding: 5px 16px;
+        font-size: 25px;
+        width: 30vw;
+        height: 100px;
+        border: 2px solid;
+        border-radius: 6px;
+        color: #fff;
+        background-color: #000;
+        border-color: #fafafa;
+        text-align: center;
+        margin: 0 auto 20px;
+      }
+
+
+    .questionBtn:hover {
+        background-color: #030010;
+        border-color: #030010;
+        transition-duration: 0.1s;
+      }
+
+ ul {
+   list-style-type:none;
+  margin: 0 auto;
+   list-style:none;
+   padding:0;
+}
+
+li {
+  list-style:none;
+}
+
+h1, h2, h5{
+  text-align: center;
+}
+h3 {
+  text-align: right;
+ 
+}
+
+.highScoreLi, .highScoreh5{
+  font-size: 1.5rem;
+}
+
+.highScoreLi{
+  justify-content: space-between;
+  display: flex;
+  margin: 0 50px 20px 50px;
+  
+}
+
+
+      
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="game">
+        <section class="screen menuStart">
+           <h1>Quiz</h1>
+           <input type="button" class="menuBtn menuBtnPlay" value="Spela">
+        </section>
+        <section class="screen screenPlayMenu novisableScreen">
+           <h1>Spel</h1>
+           <input type="button" class="menuBtn casualBtnPlay" value="Träna" />
+           <input type="button" class="menuBtn casualMathBtnPlay" value="Poängjakt"/>
+           <input type="button" class="menuBtn timeBtnPlay" value="Time attack" />
+           <input type="button" class="menuBtn menuBtnBack" value="Tillbaka" /> 
+        </section>
+
+        <section class="screen screenPlay novisableScreen">
+          <input type="button" class="questionBtn casualPlayBackBtn" value="Tillbaka till start" />
+        
+           <div class="time-timer novisableScreen"> 
+            <h3>Tid kvar: <span id="timer"></span></h3>
+           </div>
+           <div class="questionTextButton">
+              <h2 class="questionText" id="questionText"></h2>
+              <ul>
+                 <li><button class="questionBtn" id="answer1"></button></li>
+                 <li><button class="questionBtn" id="answer2"></button></li>
+                 <li><button class="questionBtn" id="answer3"></button></li>
+                 <li><button class="questionBtn" id="answer4"></button></li>
+              </ul>
+           </div>
+           <span id="answerInformation"></span>
+           
+              <h4 id="playAgain"></h4>
+           
+           <div class="playBtn">
+              <input type="button" class="questionBtn nextQuestionBtn" value="Nästa fråga" />
+              <input type="button" class="questionBtn replayQuestionBtn novisableScreen" value="Spela igen" />
+           </div>
+           <div class="highScoreh5"></div>
+           <div class="highScoreDiv"></div>
+           
+        </section>
+        <section class="screen screenPlayTime novisableScreen">
+          <!-- <h2 class="questionText" id="questionText"></h2>
+             <ul>
+             <li><label for="answer1"></label> <input type="checkbox" id="answer1"></li>
+             <li><label for="answer2"></label> <input type="checkbox" id="answer2"></li>
+             <li><label for="answer3"></label> <input type="checkbox" id="answer3"></li>
+             <li><label for="answer4"></label> <input type="checkbox" id="answer4"></li>
+             </ul> -->
+          <!-- <h2 class="questionText" id="questionText"></h2>   
+             <ul>
+                <li><input type="checkbox" id="answer1"></li>
+                <li><input type="checkbox" id="answer2"></li>
+                <li><input type="checkbox" id="answer3"></li>
+                <li><input type="checkbox" id="answer4"></li>
+             </ul> -->
+       </section>
+    </main>
+    <script>
+////////////////////////Start menu/////////////////////////
+
+/*
+ document.querySelector('.timeBtnPlay').addEventListener('click', timeBtnPlayFunction);
+
+function timeBtnPlayFunction() {
+ 
+	document.querySelector(".screenPlayTime").classList.remove("novisableScreen");
+ 	document.querySelector(".screenPlayMenu").classList.add("novisableScreen");
+  
+ currentQuestionIndex = 0;
+  
+ answer1Btn.addEventListener('change', checkAnswerTimeAttack);
+ answer2Btn.addEventListener('change', checkAnswerTimeAttack);
+ answer3Btn.addEventListener('change', checkAnswerTimeAttack);
+ answer4Btn.addEventListener('change', checkAnswerTimeAttack);
+  
+ 
+ timeAttackQuestionFunction();
+} 
+
+function checkAnswerTimeAttack(e){
+  const userAnswerTime = e.currentTarget.innerHTML;
+
+const correctAnswerTime = questions[currentQuestion - 1].correctAnswer;
+
+if (userAnswerTime === correctAnswerTime) {
+
+ answerInformation.innerHTML = '';
+
+ points++;
+} 
+} */
+
+
+////////////////////////////////////////////////////////////////////////////
+// Spela knapp
+
+document.querySelector(".menuBtnPlay").onclick = function menuBtnPlayFunction() {
+	menuStart.classList.add('novisableScreen');
+	screenPlayMenu.classList.remove('novisableScreen');
+}
+
+// Tillbaka
+const casualPlayBackBtn = document.querySelector('.casualPlayBackBtn');
+casualPlayBackBtn.onclick = function casualPlayBackBtnFunction() {
+  location.reload();
+};
+
+
+const casualBtnPlay = document.querySelector('.casualBtnPlay');
+const screenPlayMenu = document.querySelector('.screenPlayMenu');
+const screenPlay = document.querySelector('.screenPlay');
+const nextQuestionBtn = document.querySelector('.nextQuestionBtn');
+const replayQuestionBtn = document.querySelector('.replayQuestionBtn');
+const questionTextButton = document.querySelector('.questionTextButton');
+const playAgain = document.getElementById("playAgain");
+const timeTimer = document.querySelector('.time-timer');
+const playBtn = document.querySelector('.playBtn');
+const casualMathBtnPlay = document.querySelector('.casualMathBtnPlay');
+const timer = document.getElementById('timer');
+const buttons = document.querySelectorAll("button");
+const highScoreDiv = document.querySelector('.highScoreDiv');
+const highScoreh5 = document.querySelector('.highScoreh5');
+const menuStart = document.querySelector('.menuStart');
+const menuBtnBack = document.querySelector('.menuBtnBack');
+
+
+// Casual Svenska
+casualBtnPlay.addEventListener('click', startGame);
+function startGame() {
+  screenPlayMenu.classList.add('novisableScreen');
+  screenPlay.classList.remove('novisableScreen');
+
+	questions.sort(() => Math.random() - .5)
+	
+  for (let i = 0; i < questions.length; i++) {
+  questions[i].answerOptions.sort(() => Math.random() - 0.5);
+}
+	currentQuestion = 0;
+
+	casualNextBtnPlayFunction();
+}
+
+const questionTextDiv = document.querySelector('#questionText');
+const answer1Btn = document.querySelector('#answer1');
+const answer2Btn = document.querySelector('#answer2');
+const answer3Btn = document.querySelector('#answer3');
+const answer4Btn = document.querySelector('#answer4');
+
+
+answer1Btn.addEventListener('click', checkAnswer);
+answer2Btn.addEventListener('click', checkAnswer);
+answer3Btn.addEventListener('click', checkAnswer);
+answer4Btn.addEventListener('click', checkAnswer); 
+
+let currentQuestion = 0;
+
+
+function checkAnswer(e) {
+  const userAnswer = e.currentTarget.innerHTML;
+  const correctAnswer = questions[currentQuestion - 1].correctAnswer;
+  const textInfo = questions[currentQuestion - 1].answerInfo;
+  
+ 
+  if (userAnswer === correctAnswer) {
+    nextQuestionBtn.classList.remove('novisableScreen');
+    document.body.style.backgroundColor = '#0A7802FF';
+    answerInformation.innerHTML = textInfo;
+  } else {
+    answerInformation.innerHTML = '';
+    document.body.style.backgroundColor = 'red';
+    nextQuestionBtn.classList.add('novisableScreen');
+  }
+}
+
+nextQuestionBtn.addEventListener('click', casualNextBtnPlayFunction);
+
+function casualNextBtnPlayFunction() {
+  document.body.style.backgroundColor = '#2c3e50';
+  nextQuestion();
+}
+
+function nextQuestion() {
+	if (currentQuestion >= questions.length) {
+		gameOver();
+    return;
+	}
+	nextQuestionBtn.classList.add('novisableScreen');
+	answerInformation.innerHTML = '';
+
+
+	questionTextDiv.innerHTML = questions[currentQuestion].questionText;
+	answer1Btn.innerHTML = questions[currentQuestion].answerOptions[0];
+	answer2Btn.innerHTML = questions[currentQuestion].answerOptions[1];
+	answer3Btn.innerHTML = questions[currentQuestion].answerOptions[2];
+	answer4Btn.innerHTML = questions[currentQuestion].answerOptions[3];
+
+	currentQuestion++;
+
+}
+
+replayQuestionBtn.addEventListener('click', restartGame);
+function restartGame() {
+  questionTextButton.classList.remove('novisableScreen');
+  replayQuestionBtn.classList.add('novisableScreen');
+  playAgain.innerHTML = '';
+  currentQuestion = 0;
+  startGame();
+}
+
+function gameOver() {
+  nextQuestionBtn.classList.add('novisableScreen');
+  questionTextButton.classList.add('novisableScreen');
+  replayQuestionBtn.classList.remove('novisableScreen');
+  answerInformation.innerHTML = '';
+  playAgain.innerHTML = 'Bra jobbat! Vill du köra en gång till?';
+}
+let points = 0;
+// Casual time
+casualMathBtnPlay.addEventListener('click', startGameTime);
+
+function startGameTime() {
+
+  screenPlay.classList.remove('novisableScreen');
+  timeTimer.classList.remove('novisableScreen');
+  screenPlayMenu.classList.add('novisableScreen');
+  playBtn.classList.add('novisableScreen');
+
+	questions.sort(() => Math.random() - .5)
+
+	questions.forEach(question => {
+		question.answerOptions.sort(() => Math.random() - 0.5)
+	});
+
+	currentQuestionIndex = 0;
+
+	answer1Btn.addEventListener('click', checkAnswerTime);
+	answer2Btn.addEventListener('click', checkAnswerTime);
+	answer3Btn.addEventListener('click', checkAnswerTime);
+	answer4Btn.addEventListener('click', checkAnswerTime);
+
+	time = setInterval(myTimer, 1000);
+	timeQuestionFunction();
+}
+let sec = 50;
+
+function myTimer() {
+	timer.innerHTML = sec + ' sekunder';
+  sec--;
+  if (sec == -1) {
+    clearInterval(time);
+    alert('Tiden är slut!');
+    gameOverTime();
+  }
+}
+
+function checkAnswerTime(e) {
+  const userAnswerTime = e.currentTarget.innerHTML;
+  const correctAnswerTime = questions[currentQuestion - 1].correctAnswer;
+
+  if (userAnswerTime === correctAnswerTime) {
+    answerInformation.innerHTML = '';
+    points++;
+  }
+
+  setTimeout(delay, 2000);
+   buttons.forEach(button => button.disabled = true);
+}
+
+function delay() {
+  buttons.forEach(button => button.disabled = false);
+  timeQuestionFunction();
+}
+
+function timeQuestionFunction() {
+	if (currentQuestion >= questions.length) {
+		gameOverTime();
+		return;
+	}
+  
+	document.body.style.backgroundColor = '#2c3e50';
+	questionTextDiv.innerHTML = questions[currentQuestion].questionText;
+
+	answer1Btn.innerHTML = questions[currentQuestion].answerOptions[0];
+	answer2Btn.innerHTML = questions[currentQuestion].answerOptions[1];
+	answer3Btn.innerHTML = questions[currentQuestion].answerOptions[2];
+	answer4Btn.innerHTML = questions[currentQuestion].answerOptions[3];
+
+	currentQuestion++;
+
+}
+
+function gameOverTime() {
+
+	const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+// Lägger till poängen till highScores
+	highScores.push(points);
+
+	// Sorterar i storleksordning
+	highScores.sort((a, b) => b - a);
+
+	// Sparar top 10
+	highScores.splice(10);
+
+	// Sparar highScore till local storage
+	localStorage.setItem("highScores", JSON.stringify(highScores));
+
+	
+	highScoreh5.innerHTML = `<h5>Highscore:</h5>`;
+	for (let i = 0; i < highScores.length; i++) {
+		highScoreDiv.innerHTML += `<li class="highScoreLi"><span class="rankHighscore">#${i + 1}</span>-<span class="pointsHighscore"> ${highScores[i]} poäng</span></li>`;
+	}
+	document.body.style.backgroundColor = '#2c3e50';
+	nextQuestionBtn.classList.add('novisableScreen');
+	questionTextButton.classList.add('novisableScreen');
+	timeTimer.classList.add('novisableScreen');
+	replayQuestionBtn.classList.remove('novisableScreen');
+	sec = -2;
+	playAgain.innerHTML = `Du fick ${points} rätt av ${questions.length} möjliga!`;
+
+}
+
+
+// Tillbaka
+menuBtnBack.onclick = function menuBtnBackFunction() {
+	screenPlayMenu.classList.add('novisableScreen');
+	menuStart.classList.remove('novisableScreen');
+}
+const questions = [{
+		questionText: '1',
+		answerOptions: [
+			'1',
+			'2',
+			'3',
+			'4'
+		],
+		correctAnswer: '4',
+		answerInfo: 'Det här går bra',
+	},
+	{
+		questionText: '2',
+		answerOptions: [
+			'1',
+			'2',
+			'3',
+			'4'
+		],
+		correctAnswer: '4',
+		answerInfo: 'Det här går bra',
+	},
+	{
+		questionText: '3',
+		answerOptions: [
+			'1',
+			'2',
+			'3',
+      '4'
+		],
+		correctAnswer: '4',
+		answerInfo: 'Det här går bra',
+	},
+	{
+		questionText: '4',
+		answerOptions: [
+			'1',
+			'2',
+			'3',
+      '4'
+		],
+		correctAnswer: '4',
+		answerInfo: 'Det här går bra',
+	}
+
+
+];
+    </script>
+  </body>
+</html> */
       <!-- TODO: skriv din kod här, innan script-taggen -->
     </main>
 

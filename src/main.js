@@ -6,7 +6,7 @@ import './style/style.scss';
 import { shuffle } from './utils';
 
 // I denna fil har vi lagrat vår "data", i detta exempel en ofullständig kortlek
-import exampleCardDeck from './exampleArray';
+import exampleCardDeck from './questionArray';
 
 // Blanda kortleken
 const myShuffledCardDeck = shuffle(exampleCardDeck);
@@ -15,7 +15,7 @@ const myShuffledCardDeck = shuffle(exampleCardDeck);
  * Vänder upp/ner på det klickade kortet genom att toggla en CSS-klass.
  * @param this - Det HTML-element som har klickats på
  * @return {void}
- */
+ 
 function flipCard(this: HTMLElement): void {
   if (this !== undefined) {
     this.classList.toggle('visible');
@@ -37,3 +37,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = cardString;
 document.querySelectorAll('.card').forEach((card) => {
   card.addEventListener('click', flipCard);
 });
+*/

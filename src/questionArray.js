@@ -1,4 +1,5 @@
-export default questions; 
+// export default questions; 
+
 
 const questions = [{
   questionText: 'Hur skriver vi block-kommentarer i JavaScript?',
@@ -111,4 +112,4 @@ const questions = [{
   answerInfo: 'Det här går bra',
 }
 
-];
+]; 

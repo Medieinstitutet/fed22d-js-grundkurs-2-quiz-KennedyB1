@@ -1,7 +1,7 @@
 
 import questions from './questionArray.js';
 
-import './style/style.scss';
+import './style/style.css';
 
 
 ////////////////////////Start menu/////////////////////////

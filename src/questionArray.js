@@ -1,12 +1,4 @@
-/*
-
-const exampleCards = [
-  'Spades Ace',
-  'Spades 2',
-  'Spades 3',
-];
-
-export default exampleCards; */
+export default questions; 
 
 const questions = [{
   questionText: 'Hur skriver vi block-kommentarer i JavaScript?',

@@ -1,32 +1,11 @@
+
+import questions from './questionArray.js';
+
+import './style/style.scss';
+
+
 ////////////////////////Start menu/////////////////////////
-/*
 
- document.querySelector('.timeBtnPlay').addEventListener('click', timeBtnPlayFunction);
-function timeBtnPlayFunction() {
- 
-	document.querySelector(".screenPlayTime").classList.remove("novisableScreen");
- 	document.querySelector(".screenPlayMenu").classList.add("novisableScreen");
-  
- currentQuestionIndex = 0;
-  
- answer1Btn.addEventListener('change', checkAnswerTimeAttack);
- answer2Btn.addEventListener('change', checkAnswerTimeAttack);
- answer3Btn.addEventListener('change', checkAnswerTimeAttack);
- answer4Btn.addEventListener('change', checkAnswerTimeAttack);
-  
- 
- timeAttackQuestionFunction();
-} 
-function checkAnswerTimeAttack(e){
-  const userAnswerTime = e.currentTarget.innerHTML;
-const correctAnswerTime = questions[currentQuestion - 1].correctAnswer;
-if (userAnswerTime === correctAnswerTime) {
- answerInformation.innerHTML = '';
- points++;
-} 
-} 
-
-*/
 ////////////////////////////////////////////////////////////////////////////
 // Spela knapp
 const casualBtnPlay = document.querySelector('.casualBtnPlay');
@@ -293,7 +272,6 @@ function showQuestions() {
         wrongAnswers.innerHTML += `<li><span>"${wrongAnswerArray[i]}"</span></li>`;
     }
 }
-
 
 // Tillbaka
 menuBtnBack.onclick = function menuBtnBackFunction() {

@@ -1,8 +1,8 @@
-/*
+
 import questions from './questionArray.js';
 
 import './style/style.scss';
-*/
+
 
 
 ////////////////////////Start menu/////////////////////////

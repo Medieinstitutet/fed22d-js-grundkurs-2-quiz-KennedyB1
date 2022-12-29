@@ -9,47 +9,113 @@ const exampleCards = [
 export default exampleCards; */
 
 const questions = [{
-  questionText: '1',
+  questionText: 'Hur skriver vi block-kommentarer i JavaScript?',
   answerOptions: [
-    '1',
-    '2',
-    '3',
-    '4'
+    '/* comment */',
+    '// comment //',
+    '*/ comment /*',
+    '** comment **'
   ],
-  correctAnswer: '4',
+  correctAnswer: '/* comment */',
   answerInfo: 'Det här går bra',
 },
 {
-  questionText: '2',
+  questionText: 'Vilket av följande hämtar ut det sista elementet i arrayen `arr`?',
   answerOptions: [
-    '1',
-    '2',
-    '3',
-    '4'
+    'arr[arr.length]',
+    'arr[arr.length - 1]',
+    'arr[arr.length + 1]',
+    'arr[arr.length] + 1'
   ],
-  correctAnswer: '4',
+  correctAnswer: 'arr[arr.length - 1]',
   answerInfo: 'Det här går bra',
 },
 {
-  questionText: '3',
+  questionText: 'Vilket är det korrekta sättet att skapa en array i JavaScript?',
   answerOptions: [
-    '1',
-    '2',
-    '3',
-          '4'
+    'const doggos = 1 = "Chewbarka", 2 = "Bark Obama", 3 = "Luke Skybarker";',
+    'const doggos = "Chewbarka", "Bark Obama", "Luke Skybarker";',
+    'const doggos = ["Chewbarka", "Bark Obama", "Luke Skybarker"];',
+          'const doggos = (1: "Chewbarka", 2: "Bark Obama", 3: "Luke Skybarker");'
   ],
-  correctAnswer: '4',
+  correctAnswer: 'const doggos = ["Chewbarka", "Bark Obama", "Luke Skybarker"];',
   answerInfo: 'Det här går bra',
 },
 {
-  questionText: '4',
+  questionText: 'Vilken datatyp är INTE primitiv ',
   answerOptions: [
-    '1',
-    '2',
-    '3',
-          '4'
+    'String',
+    'Number',
+    'Boolean',
+          'Object'
   ],
-  correctAnswer: '4',
+  correctAnswer: 'Object',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Hur skriver vi rad-kommentarer i JavaScript?',
+  answerOptions: [
+    '/*/ Pick me /*/',
+    '// No pick me!',
+    '-- Ignore them, pick me!',
+          '** Never mind the others, pick me! **'
+  ],
+  correctAnswer: '// No pick me!',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Hur skapar vi en funktion i JavaScript om vi vill lagra den i en variabel?',
+  answerOptions: [
+    'const myFunc = function() {}',
+    'const myFunc() = function {}',
+    'const myFunc = function {}',
+          'const myFunc() = function() {}'
+  ],
+  correctAnswer: 'const myFunc = function() {}',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Vilken är HTML-elementet som vi kan använda för att skriva JavaScript-kod under?',
+  answerOptions: [
+    "javascript",
+    'scripted',
+    'script',
+          'js'
+  ],
+  correctAnswer: 'script',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Vad heter händelsen som utlöses när en användare klickar på ett HTML-element?',
+  answerOptions: [
+    'Change',
+    'Click',
+    'Mouseclick',
+          'Mouseover'
+  ],
+  correctAnswer: 'Click',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Hur kan vi visa en alert-box med hjälp av JavaScript?',
+  answerOptions: [
+    'msg("Surprise!")',
+    'msgbox("Surprise!")',
+    'alert("Surprise!")',
+          'alertbox("Surprise!")'
+  ],
+  correctAnswer: 'alert("Surprise!")',
+  answerInfo: 'Det här går bra',
+},
+  {
+  questionText: 'Vilken av följande metoder kallar på en funktion för varje element i en array?',
+  answerOptions: [
+    'each()',
+    'every()',
+    'forEach()',
+          'forEvery()'
+  ],
+  correctAnswer: 'forEach()',
   answerInfo: 'Det här går bra',
 }
 

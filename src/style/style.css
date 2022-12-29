@@ -1,11 +1,8 @@
-/*@use "utils/a11y"; // Om det inte funkar, byt @use mot @import */
-@use "vendor/reset";
-
-
-      html,
+html,
       body {
         height: 100%;
         margin: 0;
+        color: white;
       }
       body {
         display: flex;
@@ -17,10 +14,9 @@
       .novisableScreen {
         display: none;
       }
-      h1 {
+      .heading {
         font-size: 50px;
       }
-
       .menuBtn {
         cursor: pointer;
         padding: 5px 16px;
@@ -35,7 +31,6 @@
         text-align: center;
         margin: 0 auto 20px;
       }
-
       .menuBtn:hover {
         background-color: #030010;
         border-color: #030010;
@@ -45,9 +40,7 @@
         display: block;
         box-sizing: border-box;
       }
-
       .questionBtn{
-
         cursor: pointer;
         padding: 5px 16px;
         font-size: 25px;
@@ -60,41 +53,50 @@
         border-color: #fafafa;
         text-align: center;
         margin: 0 auto 20px;
+        
       }
-
-
     .questionBtn:hover {
         background-color: #030010;
         border-color: #030010;
         transition-duration: 0.1s;
       }
-
  ul {
    list-style-type:none;
   margin: 0 auto;
    list-style:none;
    padding:0;
 }
-
 li {
   list-style:none;
 }
-
-h1, h2, h5{
+.heading, h2, h5, h4, #answerInformation{
   text-align: center;
 }
 h3 {
   text-align: right;
  
 }
-
 .highScoreLi, .highScoreh5{
   font-size: 1.5rem;
 }
-
 .highScoreLi{
   justify-content: space-between;
   display: flex;
   margin: 0 50px 20px 50px;
   
 }
+.showAnswersText{
+    text-align: center;
+    font-size: 1.5rem;
+    }
+
+    .questionBtnDisplay{
+        display: block;
+    }
+    .questionBtnTime{
+        background-color: white;
+        color: black;
+    }
+    .questionBtnTime:hover{
+        background-color: #a09eb5;
+    }

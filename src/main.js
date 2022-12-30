@@ -1,14 +1,3 @@
-
-/* import questions from './questionArray.js';
-
-import './style/style.scss'; */
-
-
-
-////////////////////////Start menu/////////////////////////
-
-////////////////////////////////////////////////////////////////////////////
-// Spela knapp
 const casualBtnPlay = document.querySelector('.casualBtnPlay');
 const screenPlayMenu = document.querySelector('.screenPlayMenu');
 const screenPlay = document.querySelector('.screenPlay');
@@ -34,7 +23,7 @@ const wrongAnswers = document.querySelector('.wrongAnswers');
 const correctAnswerArray = [];
 const wrongAnswerArray = [];
 
-
+////////////////////////Start menu/////////////////////////
 document.querySelector(".menuBtnPlay").onclick = function menuBtnPlayFunction() {
     menuStart.classList.add('novisableScreen');
     screenPlayMenu.classList.remove('novisableScreen');
@@ -48,7 +37,7 @@ casualPlayBackBtn.onclick = function casualPlayBackBtnFunction() {
 
 
 
-// Casual Svenska
+// Spelläge: träna
 casualBtnPlay.addEventListener('click', startGame);
 
 function startGame() {
@@ -141,7 +130,7 @@ function gameOver() {
     playAgain.innerHTML = 'Bra jobbat! Vill du köra en gång till?';
 }
 let points = 0;
-// Casual time
+// Spelläge: Poängjakt
 casualMathBtnPlay.addEventListener('click', startGameTime);
 
 function startGameTime() {

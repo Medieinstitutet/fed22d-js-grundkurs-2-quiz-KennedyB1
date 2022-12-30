@@ -1,22 +1,68 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- TODO: glöm ej att byta språk här -->
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
-  </head>
-  <body>
-    <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
-    </main>
+<html lang="sv">
 
-    <!-- TODO
-    - Validera HTML (kopiera den renderade HTML-koden): https://validator.w3.org/#validate_by_input
-    - Kontrollera tillgänglighet: https://www.a11yproject.com/checklist/ & Chrome Lighthouse/Firefox Accessibility Tools
-    - Validera genererade CSS: https://jigsaw.w3.org/css-validator/#validate_by_input
-    -->
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+   <meta charset="UTF-8" />
+   <link rel="icon" type="image/ico" href="/favicon.ico" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" type="text/css" href="src/style/style.css" />
+   <title>Quiz</title>
+</head>
+
+<body>
+   <main>
+      <section class="game">
+         <section class="screen menuStart">
+            <h1 class="heading">Quiz</h1>
+            <input type="button" class="menuBtn menuBtnPlay" value="Spela">
+         </section>
+         <section class="screen screenPlayMenu novisableScreen">
+            <h2 class="heading">Spel</h2>
+            <input type="button" class="menuBtn casualBtnPlay" value="Träna" />
+            <input type="button" class="menuBtn casualMathBtnPlay" value="Poängjakt" />
+            <input type="button" class="menuBtn timeBtnPlay" value="Time attack" />
+            <input type="button" class="menuBtn menuBtnBack" value="Tillbaka" />
+         </section>
+         <section class="screen screenPlay novisableScreen">
+            <input type="button" class="questionBtn casualPlayBackBtn" value="Tillbaka till start" />
+
+            <div class="time-timer novisableScreen">
+               <h3>Tid kvar: <span id="timer"></span></h3>
+            </div>
+            <div class="questionTextButton">
+               <h2 class="questionText" id="questionText"></h2>
+               <ul>
+                  <li><button class="questionBtn questionBtnDisplay" id="answer1"></button></li>
+                  <li><button class="questionBtn questionBtnDisplay" id="answer2"></button></li>
+                  <li><button class="questionBtn questionBtnDisplay" id="answer3"></button></li>
+                  <li><button class="questionBtn questionBtnDisplay" id="answer4"></button></li>
+               </ul>
+            </div>
+            <span id="answerInformation"></span>
+
+            <h4 id="playAgain"></h4>
+
+            <div class="playBtn">
+               <input type="button" class="questionBtn nextQuestionBtn" value="Nästa fråga" />
+               <input type="button" class="questionBtn replayQuestionBtn novisableScreen" value="Spela igen" />
+            </div>
+            <div class="highscoreCollect">
+               <div class="highScoreh5"></div>
+               <div class="highScoreDiv"></div>
+            </div>
+            <input type="button" class="menuBtn novisableScreen" id="showAnswersBtn" value="Rätt & fel svar">
+            <div class="showAnswersText novisableScreen" id="showAnswersText">
+               <p>Frågor du svarade rätt på:</p>
+               <div class="correctAnswers"></div>
+               <p>Frågor du svarade fel på:</p>
+               <div class="wrongAnswers"></div>
+            </div>
+
+         </section>
+      </section>
+
+   </main>
+   <script type="text/javascript" src="src/main.js"></script>
+</body>
+
 </html>
